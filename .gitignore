@@ -108,4 +108,8 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 
+<<<<<<< HEAD
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,java,java-web,maven
+=======
+# End of https://www.toptal.com/developers/gitignore/api/eclipse,java,java-web,maven
+>>>>>>> branch 'main' of https://github.com/Minikanko/Instagram_clone.git
