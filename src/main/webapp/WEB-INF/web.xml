@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 	<welcome-file-list>
-		<welcome-file>home.do</welcome-file>
+		<welcome-file>loginForm.do</welcome-file>
 	</welcome-file-list>
 	<!-- DispatcherServlet 로딩에 앞서 Filter기반 Security 설정과 spring-model ( 로그인 관련 
 		db연동을 통한 인증,인가 처리를 위해) 설정을 ServletContextListener를 이용해 로딩한다 -->

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,14 +42,14 @@
 					<h1 class="sprite_insta_big_logo"></h1>
 				</div>
 				<div class="form_container">
-					<form action="#">
+					<form action="login.do" method="post">
+						<sec:csrfInput />
 						<p class="login_user_name">
-							<input type="text" id="user_name"
-								placeholder="전화번호,사용자 이름 또는 이메일">
+							<input type="text" name="id"
+								placeholder="전화번호,사용자 이름 또는 이메일" required="required">
 						</p>
-
 						<p class="login_user_password">
-							<input type="text" id="user_password" placeholder="비밀번호">
+							<input type="password" name="pw" placeholder="비밀번호" required="required">
 						</p>
 
 						<input type="submit" id="submit_btn" value="로그인"
@@ -72,8 +74,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
-
 </body>
 </html>

@@ -43,9 +43,9 @@
 						login-page="/loginForm.do"
 						login-processing-url="/login.do"
 						username-parameter="id"
-						password-parameter="password"
+						password-parameter="pw"
 						authentication-failure-url="/login_fail.do"
-						default-target-url="/login_result.do"						
+						default-target-url="/home.do"						
 						/>						
 	<!-- 
 		 security logout 설정 
