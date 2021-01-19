@@ -27,11 +27,16 @@
 <meta itemprop="description" content="instagram clone">
 
 <title>Instagram</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/common.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/login.css">
-<link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/imgs/instagram.png">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/reset.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/common.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/style.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/login.css">
+<link rel="shortcut icon"
+	href="${pageContext.request.contextPath}/resources/imgs/instagram.png">
 
 </head>
 <body>
@@ -42,34 +47,31 @@
 					<h1 class="sprite_insta_big_logo"></h1>
 				</div>
 				<div class="form_container">
-					<form action="login.do" method="post">
+					<h2 class="register_comments">친구들의 사진과 동영상을 보려면 가입하세요.</h2>
+					<form action="registerMember.do" method="post">
 						<sec:csrfInput />
 						<p class="login_user_name">
-							<input type="text" name="id"
-								placeholder="사용자 이름 또는 이메일" required="required">
+							<input type="email" name="id" id="id" placeholder="이메일" required="required">
+						</p>
+						<p class="login_user_name">
+							<input type="text" name="name" placeholder="사용자 이름" required="required">
+						</p>
+						<p class="login_user_name">
+							<input type="text" name="nickName" placeholder="사용자 닉네임" required="required">
 						</p>
 						<p class="login_user_password">
 							<input type="password" name="pw" placeholder="비밀번호" required="required">
 						</p>
-
-						<input type="submit" id="submit_btn" value="로그인"
-							class="submit_btn">
+						<input type="submit" id="submit_btn" value="가입" class="submit_btn">
 					</form>
 				</div>
-				<div class="or_wrapper">
-					<hr class="or_left_box">
 
-					<div class="or_middle_box">또는</div>
-					<hr class="or_right_box">
-				</div>
-				<div class="forget_pw_box">
-					<a href="#" class="find_pw">비밀번호를 잊으셨나요?</a>
-				</div>
 			</div>
 			<div class="login_middle_box">
 				<div class="join_container">
 					<p>
-						계정이 없으신가요? <a href="${pageContext.request.contextPath}/registerForm.do " class="join_link">가입하기</a>
+						계정이 있으신가요? 
+						<a href="${pageContext.request.contextPath}/loginForm.do" class="join_link">로그인</a>
 					</p>
 				</div>
 			</div>

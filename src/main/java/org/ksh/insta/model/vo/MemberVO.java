@@ -4,14 +4,13 @@ public class MemberVO {
 	private String id;
 	private String pw;
 	private String name;
+	private String nickName;
 	private String pr;
 	private String profilePic;
 	private String tel;
-	private String email;
 	private String sex;
 	private String status;
 	private String joined;
-	
 	public String getId() {
 		return id;
 	}
@@ -30,6 +29,12 @@ public class MemberVO {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getNickName() {
+		return nickName;
+	}
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
 	public String getPr() {
 		return pr;
 	}
@@ -47,12 +52,6 @@ public class MemberVO {
 	}
 	public void setTel(String tel) {
 		this.tel = tel;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
 	}
 	public String getSex() {
 		return sex;
@@ -75,20 +74,22 @@ public class MemberVO {
 	public MemberVO() {
 		super();
 	}
-	public MemberVO(String id, String pw, String name, String pr, String profilePic, String tel, String email, String sex,
-			String status, String joined) {
+	public MemberVO(String id, String pw, String name, String nickName, String pr, String profilePic, String tel,
+			String sex, String status, String joined) {
 		super();
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
+		this.nickName = nickName;
 		this.pr = pr;
 		this.profilePic = profilePic;
 		this.tel = tel;
-		this.email = email;
 		this.sex = sex;
 		this.status = status;
 		this.joined = joined;
 	}
+	
+	
 	
 	
 	
