@@ -3,11 +3,11 @@
 <header id="header">
 	<section class="inner">
 		<h1 class="logo">
-			<a href="index.html">
-				<div class="sprite_insta_icon"></div>
+			<a href="home.do">
 				<div class="sprite_write_logo"></div>
 			</a>
 		</h1>
+
 		<div class="search_box">
 			<input type="text" placeholder="검색" id="search-field">
 
@@ -15,13 +15,13 @@
 				<span class="sprite_small_search_icon"></span> <span>검색</span>
 			</div>
 		</div>
-		<div class="right_icons">
-			<a href="new_post.html"><div class="sprite_camera_icon"></div></a> <a
-				href="login.html"><div class="sprite_compass_icon"></div></a> <a
-				href="follow.html"><div class="sprite_heart_icon_outline"></div></a>
-			<a href="profile.html"><div class="sprite_user_icon_outline"></div></a>
-		</div>
 
+		<ul class="right_icons">
+			<li class="sprite_small_home_icon"><a href="#"></a></li>
+			<li class="sprite_small_message_icon"><a href="#"></a></li>
+			<li class="sprite_small_compass_icon"><a href="#"></a></li>
+			<li class="sprite_small_heart_icon"><a href="#"></a></li>
+			<li class="sprite_small_user_icon"><a href="#"></a></li>
+		</ul>
 	</section>
-
 </header>

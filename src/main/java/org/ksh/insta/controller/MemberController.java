@@ -18,13 +18,13 @@ public class MemberController {
 	//로그인 폼으로 이동
 	@RequestMapping("loginForm.do")
 	public String loginForm() {
-		return "member/loginForm";
+		return "member/login_form";
 	}
 	
 	//회원가입 폼으로 이동
 	@RequestMapping("registerForm.do")
 	public String registerForm() {
-		return "member/registerForm"; 
+		return "member/register_form"; 
 	}
 	
 	//회원가입
@@ -37,7 +37,7 @@ public class MemberController {
 	//회원가입 폼으로 이동
 	@RequestMapping("registerMember_ok.do")
 	public String registerMemberOk(MemberVO mvo) {
-		return "member/registerMember_ok"; 
+		return "member/register_member_ok"; 
 	}
 	
 	//아이디 중복확인

@@ -5,11 +5,13 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.ksh.insta.model.mapper.MemberMapper;
+import org.ksh.insta.model.mapper.PostMapper;
 import org.ksh.insta.model.vo.Authority;
 import org.ksh.insta.model.vo.MemberVO;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Service
 public class MemberServiceImp implements MemberService {

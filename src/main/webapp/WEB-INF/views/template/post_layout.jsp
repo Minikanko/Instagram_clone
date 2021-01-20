@@ -14,6 +14,8 @@
 	href="${pageContext.request.contextPath}/resources/css/common.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/style.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/post.css">
 <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/imgs/instagram.png">
 <!-- title -->
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
@@ -23,14 +25,10 @@
 	<section id="container">
 		<!-- Tiles header 영역 -->
 		<tiles:insertAttribute name="header" />
-		<section id="main_container">
-			<div class="inner">
-				<!-- Tiles main 영역 -->
-				<tiles:insertAttribute name="main" />
-				<!-- Tiles right 영역 -->
-				<tiles:insertAttribute name="right" />
-			</div>
-		</section>
+
+		<!-- Tiles main 영역 -->
+		<tiles:insertAttribute name="main" />
+
 		<!-- Tiles main 영역 -->
 		<tiles:insertAttribute name="footer" />
 	</section>

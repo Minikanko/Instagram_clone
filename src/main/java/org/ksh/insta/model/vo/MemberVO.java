@@ -88,10 +88,11 @@ public class MemberVO {
 		this.status = status;
 		this.joined = joined;
 	}
-	
-	
-	
-	
-	
+	@Override
+	public String toString() {
+		return "MemberVO [id=" + id + ", pw=" + pw + ", name=" + name + ", nickName=" + nickName + ", pr=" + pr
+				+ ", profilePic=" + profilePic + ", tel=" + tel + ", sex=" + sex + ", status=" + status + ", joined="
+				+ joined + "]";
+	}
 
 }
