@@ -8,11 +8,27 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select post_no,id,comments from post
 	</sql>
 	<resultMap type="postVO" id="pvm">
-		<association property="memberVO.id" column="id"></association>
-		<association property="memberVO.name" column="name"></association>
-		<association property="memberVO.nickName" column="nick_name"></association>
-		<association property="memberVO.profilePic" column="profile_pic"></association>
+		<result property="memberVO.id" column="id"/>
+		<result property="memberVO.name" column="name"/>
+		<result property="memberVO.nickName" column="nick_name"/>
+		<result property="memberVO.profilePic" column="profile_pic"/>
 	</resultMap>
+	<!-- 피드 전체 보기 -->
+	<select id="selectAllPost" resultMap="pvm" parameterType="pagingBean">
+		select p.post_no,m.id,m.name,m.nick_name,m.profile_pic,p.comments,p.register_date
+		from (select row_number() over(order by register_date desc) as rnum,post_no,comments,id,register_date from post) p,
+		member m
+		where p.id=m.id and p.rnum between ${startRowNumber} and #{endRowNumber}
+	</select>
+	<!-- 피드 사진 전체 가져오기 -->
+	<select id="selectAllPics" resultType="postPicVO">
+		select pic_no,pic from post_pic where post_no=#{value}
+	</select>
+	<!-- 게시물 전체 수량 -->
+	<select id="totalPostCount" resultType="int">
+		select count(*) from post 
+	</select>
+	
 	<insert id="registerPost" parameterType="postVO">
 		<selectKey keyProperty="postNo" resultType="string" order="BEFORE">
 			select post_seq.nextval from dual

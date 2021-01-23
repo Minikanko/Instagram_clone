@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.ksh.insta.model.service.PostService;
 import org.ksh.insta.model.vo.MemberVO;
+import org.ksh.insta.model.vo.PagingBean;
 import org.ksh.insta.model.vo.PostPicVO;
 import org.ksh.insta.model.vo.PostVO;
 import org.springframework.test.context.ContextConfiguration;
@@ -21,6 +22,7 @@ public class PostTest {
 	@Resource
 	PostService postService;
 	
+	/*
 	@Test
 	public void registerPost() {
 		PostVO pvo = new PostVO();
@@ -33,5 +35,17 @@ public class PostTest {
 		ppvo.add(new PostPicVO("", "", "asdfa"));
 		pvo.setPostPicVOList(ppvo);
 		postService.registerPost(pvo);
+	}
+	*/
+	
+	@Test
+	public void selectAllPost() {
+		PagingBean pagingBean = new PagingBean(1);
+		System.out.println(pagingBean.getStartRowNumber());
+		System.out.println(pagingBean.getEndRowNumber());
+		List<PostVO> pvoList = postService.selectAllPost(pagingBean);
+		for(PostVO pvo:pvoList) {
+			System.out.println(pvo);
+		}
 	}
 }
