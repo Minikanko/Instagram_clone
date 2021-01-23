@@ -44,6 +44,8 @@ class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 <!--파일업로드 설정(multiparts)  -->
 <bean id="filterMultipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 <property name="defaultEncoding" value="utf-8"/>
+<!-- 파일업로드 크기 20MB로 설정 -->
+<property name="maxUploadSize" value="209715200"/>
 </bean>
 </beans>
 

@@ -8,6 +8,8 @@ import org.ksh.insta.model.vo.PostVO;
 public interface PostMapper {
 	
 	//게시글 등록
-	void registerPost(PostVO postVO);
-	void registerPostPic(PostPicVO postPicVO);
+	void registerPost(PostVO pvo);
+	void registerPostPic(PostPicVO ppvo);
+	//게시물 삭제
+	void deletePost(PostVO pvo);
 }

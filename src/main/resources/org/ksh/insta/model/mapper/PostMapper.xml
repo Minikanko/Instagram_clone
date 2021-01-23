@@ -23,4 +23,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		insert into post_pic(pic_no,post_no,pic) values(post_pic_seq.nextval,#{postNo},#{pic})
 	</insert>
 	
+	<delete id="deletePost" parameterType="postVO">
+		delete from post where post_no=#{postNo}
+	</delete>
+	
 </mapper>

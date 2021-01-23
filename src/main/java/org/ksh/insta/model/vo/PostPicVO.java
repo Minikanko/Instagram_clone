@@ -1,10 +1,20 @@
 package org.ksh.insta.model.vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class PostPicVO {
 	private String picNo;
 	private String postNo;
 	private String pic;
-	
+	public PostPicVO() {
+		super();
+	}
+	public PostPicVO(String picNo, String postNo, String pic) {
+		super();
+		this.picNo = picNo;
+		this.postNo = postNo;
+		this.pic = pic;
+	}
 	public String getPicNo() {
 		return picNo;
 	}
@@ -23,20 +33,10 @@ public class PostPicVO {
 	public void setPic(String pic) {
 		this.pic = pic;
 	}
-	public PostPicVO() {
-		super();
-	}
-	public PostPicVO(String picNo, String postNo, String pic) {
-		super();
-		this.picNo = picNo;
-		this.postNo = postNo;
-		this.pic = pic;
-	}
 	@Override
 	public String toString() {
 		return "PostPicVO [picNo=" + picNo + ", postNo=" + postNo + ", pic=" + pic + "]";
 	}
-	
 	
 	
 }
